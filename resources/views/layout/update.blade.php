@@ -10,7 +10,8 @@
         </div>
         <div class="card">
             <div class="card-body">
-                <form action="" method="POST">
+                <form action="{{ route('store.todo') }}" method="POST">
+                    @csrf
                     <div class="mb-3">
                       <label for="" class="form-label mt-2" name="name">Name</label>
                       <input type="text" class="form-control" id="" aria-describedby="emailHelp">

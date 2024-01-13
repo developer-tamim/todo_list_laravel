@@ -18,17 +18,20 @@
                 <th scope="col">Action</th>
               </tr>
             </thead>
+            @foreach ($todo as $data)
             <tbody>
-              <tr valign="middle">
-                <td>Name</td>
-                <td>Word</td>
-                <td>Due Date</td>
-                <td>
-                    <a href="" class="btn btn-primary btn-sm">Edit</a>
-                    <a href="" class="btn btn-danger btn-sm">Delete</a>
-                </td>
-              </tr>
+                <tr valign="middle">
+                    <td>{{ $data->name }}</td>
+                    <td>{{ $data->work }}</td>
+                    <td>{{ $data->due_date }}</td>
+                    <td>
+                        <a href="{{ route('edit.todo') }}" class="btn btn-primary btn-sm">Edit</a>
+                        <a href="{{ route('destroy.todo', $data->id) }}" class="btn btn-danger btn-sm">Delete</a>
+                    </td>
+                </tr>
             </tbody>
+
+            @endforeach
           </table>
     </div>
 
