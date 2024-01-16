@@ -57,7 +57,8 @@ class TodoController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $todo = Todo::find($id);
+        return view("layout.update" , compact('todo'));
     }
 
     /**

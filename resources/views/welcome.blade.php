@@ -25,7 +25,7 @@
                     <td>{{ $data->work }}</td>
                     <td>{{ $data->due_date }}</td>
                     <td>
-                        <a href="{{ route('edit.todo') }}" class="btn btn-primary btn-sm">Edit</a>
+                        <a href="" class="btn btn-success btn-sm">Update</a>
                         <a href="{{ route('destroy.todo', $data->id) }}" class="btn btn-danger btn-sm">Delete</a>
                     </td>
                 </tr>

@@ -10,19 +10,19 @@
         </div>
         <div class="card">
             <div class="card-body">
-                <form action="{{ route('store.todo') }}" method="POST">
+                <form action="{{ route('update.todo') }}" method="POST">
                     @csrf
                     <div class="mb-3">
                       <label for="" class="form-label mt-2" name="name">Name</label>
-                      <input type="text" class="form-control" id="" aria-describedby="emailHelp">
+                      <input type="text" class="form-control" id="" aria-describedby="emailHelp" value="{{ $todo->name }}">
                     </div>
                     <div class="mb-3">
                       <label for="" class="form-label mt-2" name="name">Work</label>
-                      <input type="text" class="form-control" id="" aria-describedby="emailHelp">
+                      <input type="text" class="form-control" id="" aria-describedby="emailHelp" value="{{ $todo->work }}">
                     </div>
                     <div class="mb-3">
                       <label for="" class="form-label mt-2" name="name">Due Date</label>
-                      <input type="date" class="form-control" id="" aria-describedby="emailHelp">
+                      <input type="date" class="form-control" id="" aria-describedby="emailHelp" value="{{ $todo->due_date }}">
                     </div>
 
                     <button type="submit" class="btn btn-primary mt-2">Update</button>

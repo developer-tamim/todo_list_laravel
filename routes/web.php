@@ -21,7 +21,8 @@ Route::get('/create', function () {
     return view('layout.create');
 })->name('create.todo');
 
-Route::get('/edit', [TodoController::class, 'edit'])->name('edit.todo');
+Route::get('/edit/{id}', [TodoController::class, 'edit'])->name('edit.todo');
+Route::post('/update', [TodoController::class, 'update'])->name('update.todo');
 
 Route::post('/store', [TodoController::class, 'store'])->name('store.todo');
 Route::get('/delete/{id}', [TodoController::class, 'destroy'])->name('destroy.todo');
