@@ -10,4 +10,10 @@
 <br>
 <br>
 <h1>How to run this application</h1>
+<ul>
+    <li>composer update</li>
+    <li>create and connect databae</li>
+    <li>php artisan migrate</li>
+    <li>php artisan serve</li>
+</ul>
 
